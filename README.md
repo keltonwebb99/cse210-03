@@ -16,12 +16,12 @@ If the player has no more parachute the game is over.
 
 Design
 
--List of words
+-List of words (Josiah)
     20 words (read a file idea)* or (convert strings to arrays character array)*
     randomly choose one
     return word to puzzle (use _ to make private)
 
--Puzzle
+-Puzzle (Stacie)
     take guess and compare with word
         Return lives (if true return correct position in array)
     
@@ -31,7 +31,7 @@ Design
     # Minus 1 life if letter guessed is not in word
         ** Make list of letters already guessed
 
--Jumper
+-Jumper (Teigan)
     For each life have associated line
     When tries reaches 4 guesses, game over
     Head turns to x when game over
@@ -39,7 +39,7 @@ Design
     Return lines (diagram)
 
 
--Terminal_Service
+-Terminal_Service (Kelton)
     Makes a guess and returns to puzzle
         Input validation*
     Display altered jumper
