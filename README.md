@@ -1,9 +1,6 @@
 # cse210-03
 Here is the README.md to make the design for the project. Enter your name below when you are able to access:
 Kelton Webb
-<<<<<<< HEAD
-Josiah Madondo
-=======
 Teigen Barber
 Stacie Abbey
 
@@ -30,18 +27,17 @@ Design
         Return lives (if true return correct position in array)
     
 
--Jumper (Teigan)
+-Jumper (Teigen)
     For each life have associated line
     When tries reaches 4 guesses, game over
     Head turns to x when game over
-    Display Word in "__ __"
     Return lines (diagram)
 
 
 -Terminal_Service (Kelton)
     Makes a guess and returns to puzzle
         Input validation*
+    Display Word in "__ __"
     Display altered jumper
     Display letters that have been guessed*
     Win/Lose method
->>>>>>> c3fda1f0dcb453dc92f9c6198a7ecf8098270afc
