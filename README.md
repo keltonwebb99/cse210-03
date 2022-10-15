@@ -1,9 +1,7 @@
 # cse210-03
 Here is the README.md to make the design for the project. Enter your name below when you are able to access:
 Kelton Webb
-<<<<<<< HEAD
 Josiah Madondo
-=======
 Teigen Barber
 Stacie Abbey
 
@@ -44,4 +42,3 @@ Design
     Display altered jumper
     Display letters that have been guessed*
     Win/Lose method
->>>>>>> c3fda1f0dcb453dc92f9c6198a7ecf8098270afc
