@@ -14,7 +14,7 @@ class Puzzle:
     def compare_letter_to_word(self):
 
         # **list_of_words is a guess of what the word class is going to be named and get_valid_word for function/method
-        word = Wordslist.get_valid_word(words)
+        word = Wordslist.get_valid_word(self)
         # making the word a iterable set
         word_letters = set(word) 
         # Set to uppercase and separate so letters can be accessed individually
