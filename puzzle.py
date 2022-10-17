@@ -8,6 +8,7 @@
 import string
 
 from words_list import Wordslist
+from jumper import Jumper
 
 class Puzzle:
 
@@ -33,7 +34,7 @@ class Puzzle:
         # For current word
         word_list = [letter if letter in player_set_of_guesses else '-' for letter in word]
         # From Jumper class, print visual with number of lives left
-        print(jumper.jumper_visual_dict[lives])
+        print(Jumper.jumper_visual_dict[lives])
         print('Current word: ', ' '.join(word_list))
 
         # **Input, not sure if this will be in this class
@@ -61,12 +62,12 @@ class Puzzle:
         else:
             print(f'\nThat is not a valid letter.')
 
-    # Check if there are any remaining lives, if not then end game.
-    if lives == 0:
-        # Show jumper with X for head
-        print(jumper_visual_dict[lives])
-        # Reveal word 
-        print(f'Sorry, your parachute failed. The word was {word}.')
-    else:
-        # Reveal guessed word
-        print(f'Terrific! You guessed {word}!')
+        # Check if there are any remaining lives, if not then end game.
+        if lives == 0:
+            # Show jumper with X for head
+            print(Jumper.jumper_visual_dict[lives])
+            # Reveal word 
+            print(f'Sorry, your parachute failed. The word was {word}.')
+        else:
+            # Reveal guessed word
+            print(f'Terrific! You guessed {word}!')
