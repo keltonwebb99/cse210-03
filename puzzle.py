@@ -6,4 +6,4 @@
 
 """
 class Puzzle:
-    
+    pass
