@@ -11,14 +11,11 @@ from words_list import Wordslist
 from jumper import Jumper
 
 class Puzzle:
-<<<<<<< HEAD
-    pass
-=======
 
     def compare_letter_to_word(self):
 
-        # **list_of_words is a guess of what the word class is going to be named and get_valid_word for function/method
-        word = Wordslist.get_valid_word(self)
+        # Bring in class Wordslist with the rand_words method
+        word = Wordslist.rand_words(self)
         # making the word a iterable set
         word_letters = set(word) 
         # Set to uppercase and separate so letters can be accessed individually
@@ -74,4 +71,3 @@ class Puzzle:
         else:
             # Reveal guessed word
             print(f'Terrific! You guessed {word}!')
->>>>>>> bd27332b1dcf1dbc7fdf03fb7aa5315ec47c6f63
