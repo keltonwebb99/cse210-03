@@ -6,3 +6,5 @@
 
 class Jumper:
     pass
+    def lines():
+        pass
