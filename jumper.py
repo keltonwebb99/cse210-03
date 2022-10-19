@@ -5,6 +5,51 @@
     Return lines (diagram)"""
 
 class Jumper:
-    pass
-    def lines():
-        pass
+    def lines(self):
+        if self._lives == 4:
+            print("          /n"
+                  "   ____   /n"
+                  "  /    \  /n"
+                  "   ____   /n"
+                  "  \    /  /n"
+                  "   \  /   /n"
+                  "     O    /n"
+                  "   / | \  /n"
+                  "    / \   /n"
+                  "          /n"
+                  "^^^^^^^^^^/n")
+        elif self._lives == 3:
+            print("          /n"
+                  "  /    \  /n"
+                  "   ____   /n"
+                  "  \    /  /n"
+                  "   \  /   /n"
+                  "     O    /n"
+                  "   / | \  /n"
+                  "    / \   /n"
+                  "          /n"
+                  "^^^^^^^^^^/n")
+        elif self._lives == 2:
+            print("          /n"
+                  "  \    /  /n"
+                  "   \  /   /n"
+                  "     O    /n"
+                  "   / | \  /n"
+                  "    / \   /n"
+                  "          /n"
+                  "^^^^^^^^^^/n")
+        elif self._lives == 1:
+            print("          /n"
+                  "   \  /   /n"
+                  "     O    /n"
+                  "   / | \  /n"
+                  "    / \   /n"
+                  "          /n"
+                  "^^^^^^^^^^/n")
+        elif self._lives == 0:
+            print("          /n"
+                  "     X    /n"
+                  "   / | \  /n"
+                  "    / \   /n"
+                  "          /n"
+                  "^^^^^^^^^^/n")
