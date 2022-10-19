@@ -30,7 +30,7 @@ class Director:
     def _do_ouputs(self):
         TerminalService.display_jumper(self)
 
-        if self._jumper.dies#the function that picks up if the dudes head is an x
+        if self._jumper.dies: #the function that picks up if the dudes head is an x
             self._is_playing = False
         
         """If is playing is false then it will end game"""
