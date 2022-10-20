@@ -10,36 +10,41 @@ from words_list import Wordslist
 from jumper import Jumper
 
 class Puzzle:
-
     def __init__(self):
         
         self._jumper = Jumper()
         self._player_set_of_guesses = set()
         self._word = Wordslist()
-        self._lives = 4
+        self._lives = 4 
+        self._alphabet = set(string.ascii_uppercase)
         
+
     def compare_letter_to_word(self):
-        word = self._word.rand_words(self) 
+        word = self._word.rand_words() 
+         
+        # working on this 
         self.word_letters = set(word) 
-        self.alphabet = set(string.ascii_uppercase)
+        #self.alphabet = set(string.ascii_uppercase)
 
         while len(self.word_letters) > 0 and self._lives > 0:
             print('You have ', self._lives ,'more parachute strings and you have used these letters: ', ' '.join(self._player_set_of_guesses))
 
         word_list = [letter if letter in self._player_set_of_guesses else '-' for letter in word]
 
-        print(self._jumper.lines(self._lives))
+        self._jumper.lines(self._lives)
         print('Current word: ', ' '.join(word_list))
 
     def player_input(self):
         player_guess = input('Guess a letter: ').upper()
+        self.word_letters = set(self._word) 
 
-        if player_guess in self.alphabet - self._player_set_of_guesses:
+
+        if player_guess in self._alphabet - self._player_set_of_guesses:
             self._player_set_of_guesses.add(player_guess)
             if player_guess in self.word_letters:
                 self.word_letters.remove(player_guess)
                 print('')
-                return self
+
             else:
                 self._lives -= 1  
                 print(f'\n{player_guess} is not in the word.')
@@ -52,7 +57,7 @@ class Puzzle:
 
     def lives_left(self):
         if self._lives == 0:
-            print(self._jumper.lines(self._lives))
+            self._jumper.lines(self._lives)
             print(f'Sorry, your parachute failed. The word was {self._word}.')
         else:
             print(f'Terrific! You guessed {self._word}!')
