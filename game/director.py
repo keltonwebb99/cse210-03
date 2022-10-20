@@ -1,6 +1,5 @@
-from terminal_service import TerminalService
-from puzzle import Puzzle
-from jumper import Jumper
+from game.puzzle import Puzzle
+from game.jumper import Jumper
 
 
 

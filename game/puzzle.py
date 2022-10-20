@@ -6,8 +6,8 @@
 
 """
 import string
-from words_list import Wordslist
-from jumper import Jumper
+from game.words_list import Wordslist
+from game.jumper import Jumper
 
 class Puzzle:
     def __init__(self):
@@ -23,7 +23,7 @@ class Puzzle:
         word = self._word.rand_words() 
          
         # working on this 
-        self.word_letters = set(word) 
+        self._word_letters = set(word) 
         #self.alphabet = set(string.ascii_uppercase)
 
         while len(self.word_letters) > 0 and self._lives > 0:

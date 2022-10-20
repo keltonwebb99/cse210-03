@@ -1,15 +1,16 @@
 """-Jumper (Teigen)
-    For each life have associated line
+    For each life have associated drawing
     When tries reaches 4 guesses, game over
     Head turns to x when game over
-    Return lines (diagram)"""
+    print diagram from an if statement"""
 
-from puzzle import Puzzle
+from game.puzzle import Puzzle
 
 class Jumper:
     def _init_(self):
         self._puzzle= Puzzle()
         self._lives = self._puzzle.player_input
+        
 
     def lines(self):
         if self._lives == 4:
