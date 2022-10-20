@@ -28,7 +28,7 @@ class Puzzle:
 
         word_list = [letter if letter in self._player_set_of_guesses else '-' for letter in word]
 
-        print(self._jumper.lines(self._lives))
+        self._jumper.lines(self._lives)
         print('Current word: ', ' '.join(word_list))
 
     def player_input(self):
@@ -52,7 +52,7 @@ class Puzzle:
 
     def lives_left(self):
         if self._lives == 0:
-            print(self._jumper.lines(self._lives))
+            self._jumper.lines(self._lives)
             print(f'Sorry, your parachute failed. The word was {self._word}.')
         else:
             print(f'Terrific! You guessed {self._word}!')
