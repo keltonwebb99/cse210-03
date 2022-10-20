@@ -15,7 +15,7 @@ class Wordslist:
             self (Wordslist): An instance of Wordslist.
         """
         self._words = []
-        self._quantity = ""
+        #self._quantity = ""
 
     def rand_words(self):
         """Return a randomly chosen word.
@@ -24,8 +24,8 @@ class Wordslist:
         
     Return: a randomly chosen word.
     """
-        if self._quantity == 1:
-         self._words = ["charming", "perfect", "gorgeous", "gentle", "sleep", "rough",
+        #if self._quantity == 1:
+        self._words = ["charming", "perfect", "gorgeous", "gentle", "sleep", "rough",
         "sharp", "tasty", "cruel", "program", "thought", "drive", "accident", "accept", 
         "receive", "receipt", "random", "generate", "children", "charity"] 
         
