@@ -17,7 +17,7 @@ class Puzzle:
         self._player_set_of_guesses = set()
         self._word = Wordslist()
         self._lives = 4
-
+        
     def compare_letter_to_word(self):
         word = self._word.rand_words(self) 
         self.word_letters = set(word) 
@@ -39,9 +39,9 @@ class Puzzle:
             if player_guess in self.word_letters:
                 self.word_letters.remove(player_guess)
                 print('')
-
+                return self
             else:
-                lives -= 1  
+                self._lives -= 1  
                 print(f'\n{player_guess} is not in the word.')
 
         elif player_guess in self._player_set_of_guesses:
