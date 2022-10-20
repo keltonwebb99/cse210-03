@@ -30,7 +30,7 @@ class Director:
     def _do_outputs(self):
         self._jumper.lines(self._lives)
         
-        if self._jumper.lines == 0 #the function that picks up if the dudes head is an x
+        if self._jumper.lines == 0: #the function that picks up if the dudes head is an x
             self._is_playing = False
         
         """If is playing is false then it will end game"""

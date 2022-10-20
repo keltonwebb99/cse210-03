@@ -4,7 +4,13 @@
     Head turns to x when game over
     Return lines (diagram)"""
 
+from puzzle import Puzzle
+
 class Jumper:
+    def _init_(self):
+        self._puzzle= Puzzle()
+        self._lives = self._puzzle.player_input
+
     def lines(self):
         if self._lives == 4:
             print("          /n"
