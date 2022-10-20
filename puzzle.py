@@ -42,7 +42,7 @@ class Puzzle:
         # For current word
         word_list = [letter if letter in self._player_set_of_guesses else '-' for letter in word]
         # From Jumper class, print visual with number of lives left
-        print(self._jumper.jumper_visual_dict[lives])
+        print(self._jumper.lines(lives))
         print('Current word: ', ' '.join(word_list))
 
         # **Input, not sure if this will be in this class
@@ -73,7 +73,7 @@ class Puzzle:
         # Check if there are any remaining lives, if not then end game.
         if lives == 0:
             # Show jumper with X for head
-            print(self._jumper.jumper_visual_dict[lives])
+            print(self._jumper.lines(lives))
             # Reveal word 
             print(f'Sorry, your parachute failed. The word was {word}.')
         else:
