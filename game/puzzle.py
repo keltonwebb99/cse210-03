@@ -36,8 +36,8 @@ class Puzzle:
         print('Current word: ', ' '.join(word_list))
         return word_list
 
-    def player_input(self, player_guess):
-        # player_guess = input('Guess a letter: ').upper()
+    def player_input(self):
+        player_guess = input('Guess a letter: ').upper()
         self.word_letters = set(self._word) 
 
 
