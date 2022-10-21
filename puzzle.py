@@ -11,9 +11,7 @@ from words_list import Wordslist
 from jumper import Jumper
 
 class Puzzle:
-<<<<<<< HEAD
     pass
-=======
 
     def compare_letter_to_word(self):
 
@@ -74,4 +72,3 @@ class Puzzle:
         else:
             # Reveal guessed word
             print(f'Terrific! You guessed {word}!')
->>>>>>> bd27332b1dcf1dbc7fdf03fb7aa5315ec47c6f63

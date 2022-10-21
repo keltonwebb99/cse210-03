@@ -14,20 +14,16 @@ class Wordslist:
         Args:
             self (Wordslist): An instance of Wordslist.
         """
-        self._words = []
-        self._quantity = ""
+        self._words = ["charming", "perfect", "gorgeous", "gentle", "sleep", "rough",
+        "sharp", "tasty", "cruel", "program", "thought", "drive", "accident", "accept", 
+        "receive", "receipt", "random", "generate", "children", "charity"]
 
     def rand_words(self):
-        """Return a randomly chosen word.
-    If self._quantity == 1, this function will
+        """This function will
     return one of these twenty words:
         
     Return: a randomly chosen word.
-    """
-        if self._quantity == 1:
-         self._words = ["charming", "perfect", "gorgeous", "gentle", "sleep", "rough",
-        "sharp", "tasty", "cruel", "program", "thought", "drive", "accident", "accept", 
-        "receive", "receipt", "random", "generate", "children", "charity"] 
+    """  
         
         word = random.choice(self._words)
         return word  
