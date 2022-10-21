@@ -33,8 +33,9 @@ class Director:
         # Will continue to run until game over
         self._puzzle.lives_left() 
         
-        #if self._puzzle.lives_left._is_playing == False:
-        #     print("game over")
+        #if self._puzzle.lives_left() == False:
+        #     print("Game Over. Thanks for playing!")
+             self._is_playing = False
         """If is playing is false then it will end game"""
         # self._end_game
 
