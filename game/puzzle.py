@@ -76,4 +76,4 @@ class Puzzle:
             print(f'Sorry, your parachute failed. The word was {self.new_word}.')
             self.is_playing = False
             return self.is_playing
-        
+        else: return
