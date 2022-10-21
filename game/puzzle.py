@@ -20,9 +20,11 @@ class Puzzle:
         self._alphabet = set(string.ascii_lowercase)
         #self._word = ''
 
-         # working on this 
         self.new_word = self._words_list.rand_words() 
-        print(self.new_word) 
+
+        # Uncomment next line for chosen word
+        # print(self.new_word) 
+
         self._word_letters = set(self.new_word) 
         #self.alphabet = set(string.ascii_uppercase)
         
@@ -35,6 +37,7 @@ class Puzzle:
        # self._word_letters = set(new_word) 
         #self.alphabet = set(string.ascii_uppercase)
 
+        # Checking for if more than 0 letters and more than 0 lives
         if len(self._word_letters) > 0 and self._lives > 0:
             print('You have ', self._lives ,'more parachute strings and you have used these letters: ', ' '.join(self._player_set_of_guesses))
 
@@ -42,16 +45,15 @@ class Puzzle:
 
         self._jumper.lines(self._lives)
         print('Current word: ', ' '.join(word_list))
-        return word_list
+        #return word_list
 
-    def player_input(self):
-        print(self._lives)
+    #def player_input(self):
+        #print(self._lives)
+        # User Input
         player_guess = input('Guess a letter: ').lower()
 
-        print(self.new_word)
-
+        #print(self.new_word)
         #self.word_letters = set(self._word_letters) 
-
 
         if player_guess in self._alphabet - self._player_set_of_guesses:
             self._player_set_of_guesses.add(player_guess)
@@ -60,6 +62,7 @@ class Puzzle:
                 print('Terrific! You guessed right!')
 
             else:
+                # If wrong, -1 life
                 self._lives -= 1  
                 print(f'\n{player_guess} is not in the word.')
 
@@ -71,6 +74,7 @@ class Puzzle:
             print(f'\nThat is not a valid letter.')
 
     def lives_left(self):
+        # gets here when len(word_letters) == 0 OR when lives == 0
         if self._lives == 0:
             self._jumper.lines(self._lives)
             print(f'Sorry, your parachute failed. The word was {self.new_word}.')
