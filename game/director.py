@@ -42,4 +42,4 @@ class Director:
     def _end_game(self):
         if self._puzzle._lives == 0:  
             self._is_playing = False
-            print("game over")
+            print("Game Over")
