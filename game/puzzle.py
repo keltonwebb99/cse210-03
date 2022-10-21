@@ -6,21 +6,22 @@
 
 """
 import string
-from game.words_list import Wordslist
-from game.jumper import Jumper
+# from .words_list import Wordslist
+# from .jumper import Jumper
 
 class Puzzle:
     def __init__(self):
         
-        self._jumper = Jumper()
+        #self._jumper = Jumper()
         self._player_set_of_guesses = set()
-        self._word = Wordslist()
+        #self._word = Wordslist()
         self._lives = 4 
         self._alphabet = set(string.ascii_uppercase)
+        self._word = ''
         
 
-    def compare_letter_to_word(self):
-        word = self._word.rand_words() 
+    def compare_letter_to_word(self, words_list):
+        word = words_list.rand_words() 
          
         # working on this 
         self._word_letters = set(word) 
@@ -33,9 +34,10 @@ class Puzzle:
 
         self._jumper.lines(self._lives)
         print('Current word: ', ' '.join(word_list))
+        return word_list
 
-    def player_input(self):
-        player_guess = input('Guess a letter: ').upper()
+    def player_input(self, player_guess):
+        # player_guess = input('Guess a letter: ').upper()
         self.word_letters = set(self._word) 
 
 
