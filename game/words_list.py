@@ -17,6 +17,8 @@ class Wordslist:
         self._words = ["charming", "perfect", "gorgeous", "gentle", "sleep", "rough",
         "sharp", "tasty", "cruel", "program", "thought", "drive", "accident", "accept", 
         "receive", "receipt", "random", "generate", "children", "charity"]
+        #self._words = []
+        #self._quantity = ""
 
     def rand_words(self):
         """This function will
