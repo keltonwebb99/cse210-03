@@ -35,7 +35,7 @@ class Director:
         
         #if self._puzzle.lives_left() == False:
         #     print("Game Over. Thanks for playing!")
-             self._is_playing = False
+        # self._is_playing = False
         """If is playing is false then it will end game"""
         # self._end_game
 
