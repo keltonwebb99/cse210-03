@@ -8,6 +8,8 @@ Teigen Barber: * email: *
 
 Stacie Abbey: * email: *
 
+                            The Jumper Game
+                            
 Rules
 Jumper is played according to the following rules:
 
