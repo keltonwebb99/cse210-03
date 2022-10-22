@@ -7,8 +7,8 @@
 """
 import string
 
-from words_list import Wordslist
-from jumper import Jumper
+from game.words_list import Wordslist
+from game.jumper import Jumper
 
 class Puzzle:
     pass

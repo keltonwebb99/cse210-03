@@ -17,17 +17,17 @@ class Wordslist:
         self._words = ["charming", "perfect", "gorgeous", "gentle", "sleep", "rough",
         "sharp", "tasty", "cruel", "program", "thought", "drive", "accident", "accept", 
         "receive", "receipt", "random", "generate", "children", "charity"]
-        #self._words = []
-        #self._quantity = ""
-
+        
     def rand_words(self):
         """This function will
     return one of these twenty words:
         
     Return: a randomly chosen word.
     """  
-        
         word = random.choice(self._words)
-        return word  
+        return word 
+
+    
+
 
 
