@@ -1,9 +1,12 @@
 # cse210-03
 Here is the README.md to make the design for the project. Enter your name below when you are able to access:
-Kelton Webb
-Josiah Madondo
-Teigen Barber
-Stacie Abbey
+Kelton Webb: * email: *
+
+Josiah Madondo: * email: jmadondo1722@gmail.com* 
+
+Teigen Barber: * email: *
+
+Stacie Abbey: * email: *
 
 Rules
 Jumper is played according to the following rules:
