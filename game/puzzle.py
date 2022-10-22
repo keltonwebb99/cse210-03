@@ -1,16 +1,27 @@
-"""Take player's letter guess from terminal service
-        + Take word from word list
-        + Compare letter guessed to word returned from list
-        + Minus 1 life if letter guessed is not in word
-            * Make list of letters already guessed
 
-"""
 import string
 from game.words_list import Wordslist
 from game.jumper import Jumper
 
+
 class Puzzle:
+    """ Responsible for comparing player's letter guess with random word and return jumper.
+
+    Attributes:
+        jumper(str) : The game's jumper
+        player_set_of_guesses(str) : make the word iterable
+        words_list(str) : The game's wordlist 
+        lives(int) = Number of lives at beginning of play 
+        alphabet(str) = set of string
+        new_word(str) = The generated word from Wordlist
+
+    """
     def __init__(self):
+        """Constructs Puzzle.
+        
+        Args:
+            self (Puzzle): an instance of Puzzle.
+        """
         
         self._jumper = Jumper()
         self._player_set_of_guesses = set()
@@ -18,11 +29,10 @@ class Puzzle:
         self._lives = 4 
         self._alphabet = set(string.ascii_lowercase)
         self.new_word = self._words_list.rand_words() 
+        self._word_letters = set(self.new_word)
 
         # Uncomment next line for chosen word
         # print(self.new_word) 
-
-        self._word_letters = set(self.new_word)
         
     def compare_letter_to_word(self):
 
@@ -46,13 +56,15 @@ class Puzzle:
             # Add player guess to set
             self._player_set_of_guesses.add(player_guess)
 
+            # Check if player_guess letter is in word
             if player_guess in self._word_letters:
                 # Remove letter from the iterable set since it has been guessed
                 self._word_letters.remove(player_guess)
                 print('Terrific! You guessed right!')
 
+            # If player guessed wrong
             else:
-                # If wrong, -1 life
+                # -1 life
                 self._lives -= 1  
                 print(f'\n{player_guess} is not in the word.')
 
@@ -65,7 +77,7 @@ class Puzzle:
             print(f'\nThat is not a valid letter.')
 
     def lives_left(self):
-        # gets here when len(word_letters) == 0 OR when lives == 0
+        # Check on number of lives. If 0 then end game, otherwise continue
         if self._lives == 0:
             self._jumper.lines(self._lives)
             # Reveal word 
