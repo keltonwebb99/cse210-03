@@ -6,7 +6,7 @@ Josiah Madondo: * email: jmadondo1722@gmail.com*
 
 Teigen Barber: * email: *
 
-Stacie Abbey: * email: *
+Stacie Abbey: * email: srabbey@byui.edu *
 
                             The Jumper Game
                             
